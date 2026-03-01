@@ -3,419 +3,671 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SPORTIDA — платформа для спортивных событий нового поколения. Календарь соревнований по художественной гимнастике, регистрация на турниры, поиск секций.">
+    <meta name="keywords" content="художественная гимнастика, соревнования, турниры, детский спорт, секции, гимнастика, спортивные события">
+    <meta name="author" content="SPORTIDA">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="SPORTIDA — Платформа для спортивных событий">
+    <meta property="og:description" content="Единое пространство для юных спортсменов, тренеров и организаторов соревнований">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sportida.ru">
+    <meta property="og:image" content="https://sportida.ru/static/images/og-image.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SPORTIDA — Платформа для спортивных событий">
+    <meta name="twitter:description" content="Календарь соревнований, регистрация на турниры, поиск секций">
+    
     <title>SPORTIDA — Платформа для спортивных событий нового поколения</title>
+    
+    <link rel="canonical" href="https://sportida.ru/">
     <link rel="stylesheet" href="static/css/style.css">
+    
+    <!-- Schema.org markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SPORTIDA",
+        "url": "https://sportida.ru",
+        "description": "Платформа для спортивных событий нового поколения",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://sportida.ru/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SPORTIDA",
+        "url": "https://sportida.ru",
+        "logo": "https://sportida.ru/static/images/logo.png",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+7-962-556-87-09",
+            "contactType": "customer service",
+            "email": "sportida@gmail.com"
+        },
+        "sameAs": [
+            "https://vk.com/sportida",
+            "https://t.me/sportida"
+        ]
+    }
+    </script>
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
+    <header class="header" itemscope itemtype="https://schema.org/WPHeader">
         <div class="container">
-            <nav class="nav">
-                <a href="/" class="logo">SPORTIDA</a>
+            <nav class="nav" role="navigation" aria-label="Главное меню">
+                <a href="/" class="logo" itemprop="name">sportida</a>
                 <ul class="nav-menu">
-                    <li><a href="#about">О платформе</a></li>
-                    <li><a href="#events">События</a></li>
-                    <li><a href="#organizers">Организаторам</a></li>
-                    <li><a href="#news">Новости</a></li>
+                    <li><a href="/gimnastika/" itemprop="url">Художественная гимнастика</a></li>
+                    <li><a href="/sorevnovaniya/" itemprop="url">Соревнования</a></li>
+                    <li><a href="/novosti/" itemprop="url">Новости</a></li>
+                    <li><a href="/blog/" itemprop="url">Блог</a></li>
                 </ul>
-                <button class="btn btn-primary">Стать партнёром</button>
             </nav>
         </div>
     </header>
 
-    <!-- Hero -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-image">
-                    <div class="hero-photo">
-                        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=500&h=600&fit=crop" alt="Гимнастка">
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" itemscope itemtype="https://schema.org/WebPageElement">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-image" itemscope itemtype="https://schema.org/ImageObject">
+                        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&h=500&fit=crop" 
+                             alt="Юная гимнастка с лентой - художественная гимнастика" 
+                             itemprop="contentUrl"
+                             loading="eager">
                     </div>
-                </div>
-                <div class="hero-text">
-                    <h1>Платформа для спортивных событий нового поколения</h1>
-                    <p class="hero-subtitle">Единое цифровое пространство для юных спортсменов, тренеров и организаторов соревнований</p>
-                    <div class="hero-buttons">
-                        <button class="btn btn-primary btn-large">
-                            <span>Я спортсмен</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M5 12h14M12 5l7 7-7 7"/>
-                            </svg>
-                        </button>
-                        <button class="btn btn-primary btn-large">
-                            <span>Я организатор</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M5 12h14M12 5l7 7-7 7"/>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sports Categories -->
-    <section class="section">
-        <div class="container">
-            <div class="sports-grid">
-                <div class="sport-card">
-                    <div class="sport-image">
-                        <img src="https://images.unsplash.com/photo-1562771242-a02d9090c90c?w=400&h=300&fit=crop" alt="Художественная гимнастика">
-                        <div class="sport-overlay"></div>
-                    </div>
-                    <h3>Художественная гимнастика</h3>
-                </div>
-                <div class="sport-card">
-                    <div class="sport-image">
-                        <img src="https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?w=400&h=300&fit=crop" alt="Спортивная гимнастика">
-                        <div class="sport-overlay"></div>
-                    </div>
-                    <h3>Спортивная гимнастика</h3>
-                </div>
-                <div class="sport-card">
-                    <div class="sport-image">
-                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=300&fit=crop" alt="Акробатика">
-                        <div class="sport-overlay"></div>
-                    </div>
-                    <h3>Акробатика</h3>
-                </div>
-                <div class="sport-card">
-                    <div class="sport-image">
-                        <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=400&h=300&fit=crop" alt="Танцевальный спорт">
-                        <div class="sport-overlay"></div>
-                    </div>
-                    <h3>Танцевальный спорт</h3>
-                </div>
-                <div class="sport-card">
-                    <div class="sport-image">
-                        <img src="https://images.unsplash.com/photo-1562771379-e71d25bd9ce3?w=400&h=300&fit=crop" alt="Прыжки на батуте">
-                        <div class="sport-overlay"></div>
-                    </div>
-                    <h3>Прыжки на батуте</h3>
-                </div>
-                <div class="sport-card">
-                    <div class="sport-image">
-                        <img src="https://images.unsplash.com/photo-1547347298-4074fc3086f0?w=400&h=300&fit=crop" alt="Фигурное катание">
-                        <div class="sport-overlay"></div>
-                    </div>
-                    <h3>Фигурное катание</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="section section-light">
-        <div class="container">
-            <div class="stats-header">
-                <h2>Мы строим мост между организаторами турниров и будущими чемпионами</h2>
-            </div>
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <span class="stat-number">100+</span>
-                    <span class="stat-label">спортсменов</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">50+</span>
-                    <span class="stat-label">организаторов</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">80%</span>
-                    <span class="stat-label">регионов РФ</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">15+</span>
-                    <span class="stat-label">видов спорта</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Ecosystem Section -->
-    <section class="section">
-        <div class="container">
-            <div class="ecosystem-content">
-                <div class="ecosystem-text">
-                    <h2>Профессиональная экосистема юниорского спорта</h2>
-                    <p>Всё необходимое для организации, участия и продвижения спортивных мероприятий в одном месте</p>
-                </div>
-                <div class="ecosystem-features">
-                    <div class="feature-item">
-                        <div class="feature-number">1</div>
-                        <span>Регистрация и учёт участников</span>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-number">2</div>
-                        <span>Онлайн-оплата стартовых взносов</span>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-number">3</div>
-                        <span>Формирование сеток и расписания</span>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-number">4</div>
-                        <span>Живые трансляции и видеозаписи</span>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-number">5</div>
-                        <span>Электронные протоколы и дипломы</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- For Whom Section -->
-    <section class="section section-light">
-        <div class="container">
-            <div class="tabs">
-                <button class="tab-btn active">Организаторам</button>
-                <button class="tab-btn">Спортсменам</button>
-            </div>
-            <div class="tab-content">
-                <div class="benefits-grid">
-                    <div class="benefit-card">
-                        <div class="benefit-icon purple">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"/>
-                                <path d="M12 6v6l4 2"/>
-                            </svg>
+                    <div class="hero-text">
+                        <h1 itemprop="headline">
+                            Платформа для спортивных событий <span class="highlight">нового поколения</span>
+                        </h1>
+                        <p class="hero-subtitle" itemprop="description">
+                            Место, где доверие организаторов встречается с ответственностью спортсменов. 
+                            Мы обеспечиваем честный старт и профессиональную организацию для всех.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="/sportsmenam/" class="btn btn-primary btn-large" role="button">
+                                <span>Я спортсмен</span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                                </svg>
+                            </a>
+                            <a href="/organizatoram/" class="btn btn-primary btn-large" role="button">
+                                <span>Я организатор</span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                                </svg>
+                            </a>
                         </div>
-                        <h3>Увеличение охвата</h3>
-                        <p>Привлекайте участников со всей России</p>
                     </div>
-                    <div class="benefit-card">
-                        <div class="benefit-icon blue">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="2" y="5" width="20" height="14" rx="2"/>
-                                <path d="M2 10h20"/>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sports Categories -->
+        <section class="section sports-section" aria-labelledby="sports-heading">
+            <div class="container">
+                <h2 id="sports-heading" class="visually-hidden">Виды спорта</h2>
+                <div class="sports-grid" itemscope itemtype="https://schema.org/ItemList">
+                    <article class="sport-card" itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement">
+                        <meta itemprop="position" content="1">
+                        <div class="sport-image">
+                            <img src="https://images.unsplash.com/photo-1562771242-a02d9090c90c?w=400&h=300&fit=crop" 
+                                 alt="Художественная гимнастика - выступление с лентой" 
+                                 itemprop="image"
+                                 loading="lazy">
+                        </div>
+                        <h3 itemprop="name">Художественная гимнастика</h3>
+                    </article>
+                    <article class="sport-card" itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement">
+                        <meta itemprop="position" content="2">
+                        <div class="sport-image">
+                            <img src="https://images.unsplash.com/photo-1547347298-4074fc3086f0?w=400&h=300&fit=crop" 
+                                 alt="Фигурное катание" 
+                                 itemprop="image"
+                                 loading="lazy">
+                        </div>
+                        <span class="badge">Скоро</span>
+                        <h3 itemprop="name">Фигурное катание</h3>
+                    </article>
+                    <article class="sport-card" itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement">
+                        <meta itemprop="position" content="3">
+                        <div class="sport-image">
+                            <img src="https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?w=400&h=300&fit=crop" 
+                                 alt="Спортивная гимнастика" 
+                                 itemprop="image"
+                                 loading="lazy">
+                        </div>
+                        <span class="badge">Скоро</span>
+                        <h3 itemprop="name">Спортивная гимнастика</h3>
+                    </article>
+                    <article class="sport-card" itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement">
+                        <meta itemprop="position" content="4">
+                        <div class="sport-image">
+                            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=300&fit=crop" 
+                                 alt="Лёгкая атлетика" 
+                                 itemprop="image"
+                                 loading="lazy">
+                        </div>
+                        <span class="badge">Скоро</span>
+                        <h3 itemprop="name">Лёгкая атлетика</h3>
+                    </article>
+                    <article class="sport-card" itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement">
+                        <meta itemprop="position" content="5">
+                        <div class="sport-image">
+                            <img src="https://images.unsplash.com/photo-1562771379-e71d25bd9ce3?w=400&h=300&fit=crop" 
+                                 alt="Лыжные гонки" 
+                                 itemprop="image"
+                                 loading="lazy">
+                        </div>
+                        <span class="badge">Скоро</span>
+                        <h3 itemprop="name">Лыжные гонки</h3>
+                    </article>
+                    <article class="sport-card" itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement">
+                        <meta itemprop="position" content="6">
+                        <div class="sport-image">
+                            <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=400&h=300&fit=crop" 
+                                 alt="Конный спорт" 
+                                 itemprop="image"
+                                 loading="lazy">
+                        </div>
+                        <span class="badge">Скоро</span>
+                        <h3 itemprop="name">Конный спорт</h3>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="section section-light stats-section" aria-labelledby="stats-heading">
+            <div class="container">
+                <div class="stats-intro">
+                    <span class="section-tag">О нас</span>
+                    <h2 id="stats-heading">Мы строим мост между организаторами турниров и будущими чемпионами</h2>
+                    <p class="stats-description">Мы создаём единое пространство, где организаторы находят участников и проводят мероприятия, а спортсмены — открывают для себя спорт, находят секции и регистрируются</p>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card stat-card-large">
+                        <div class="stat-dot"></div>
+                        <span class="stat-number">100+</span>
+                        <p class="stat-text">доступно турниров в год по художественной гимнастике</p>
+                    </div>
+                    <div class="stat-card stat-card-small">
+                        <div class="stat-dot"></div>
+                        <span class="stat-number">50+</span>
+                        <p class="stat-text">городов РФ в охвате с момента запуска</p>
+                    </div>
+                    <div class="stat-card stat-card-large">
+                        <div class="stat-dot"></div>
+                        <span class="stat-number">80%</span>
+                        <p class="stat-text">автоматизации рутинных процессов</p>
+                    </div>
+                    <div class="stat-card stat-card-small">
+                        <div class="stat-dot"></div>
+                        <span class="stat-number">15+</span>
+                        <p class="stat-text">экспертных статей — чтобы начать путь в спорте с уверенностью</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="section services-section" aria-labelledby="services-heading">
+            <div class="container">
+                <div class="services-grid">
+                    <div class="services-intro">
+                        <span class="section-tag">Наши услуги</span>
+                        <h2 id="services-heading">Профессиональная экосистема юниорского спорта</h2>
+                        <p>Регистрируйте спортсменов на старты, планируйте сезон и отслеживайте прогресс в цифровой среде</p>
+                    </div>
+                    <div class="services-list">
+                        <div class="service-item">
+                            <span class="service-num">01</span>
+                            <span class="service-text">Размещение и продвижение мероприятий</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 18l6-6-6-6"/>
                             </svg>
                         </div>
-                        <h3>Автоматизация платежей</h3>
-                        <p>Принимайте оплату онлайн без комиссии</p>
-                    </div>
-                    <div class="benefit-card">
-                        <div class="benefit-icon pink">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M3 3v18h18"/>
-                                <path d="M18 17V9"/>
-                                <path d="M13 17V5"/>
-                                <path d="M8 17v-3"/>
+                        <div class="service-item">
+                            <span class="service-num">02</span>
+                            <span class="service-text">Регистрация и учёт участников</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 18l6-6-6-6"/>
                             </svg>
                         </div>
-                        <h3>Аналитика</h3>
-                        <p>Отслеживайте статистику мероприятий</p>
-                    </div>
-                    <div class="benefit-card">
-                        <div class="benefit-icon green">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        <div class="service-item">
+                            <span class="service-num">03</span>
+                            <span class="service-text">Онлайн-оплата стартовых взносов</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 18l6-6-6-6"/>
                             </svg>
                         </div>
-                        <h3>Продвижение</h3>
-                        <p>Повышайте узнаваемость ваших турниров</p>
+                        <div class="service-item">
+                            <span class="service-num">04</span>
+                            <span class="service-text">Формирование сеток и расписания</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 18l6-6-6-6"/>
+                            </svg>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Events Section -->
-    <section id="events" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Ближайшие соревнования</h2>
-                <button class="btn btn-outline">Все события</button>
-            </div>
-            <div class="events-list">
-                <div class="event-row">
-                    <div class="event-image">
-                        <img src="https://images.unsplash.com/photo-1562771242-a02d9090c90c?w=200&h=150&fit=crop" alt="Соревнование">
-                        <span class="event-badge hot">Горячее</span>
-                    </div>
-                    <div class="event-info">
-                        <div class="event-meta">
-                            <span class="event-date">15-16 марта 2026</span>
-                            <span class="event-location">📍 Москва, СК «Олимпийский»</span>
+        <!-- For Whom Section -->
+        <section class="section section-light" aria-labelledby="forwhom-heading">
+            <div class="container">
+                <h2 id="forwhom-heading" class="tabs-title">Организаторам / Спортсменам</h2>
+                <div class="benefits-grid-4">
+                    <article class="benefit-card-simple">
+                        <div class="benefit-icon-wrapper">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#6B4EFF" stroke-width="2">
+                                <circle cx="12" cy="12" r="3"/>
+                                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                            </svg>
                         </div>
-                        <h3>Кубок «Весенняя капель» по художественной гимнастике</h3>
-                        <p>Открытые соревнования для гимнасток 2008-2016 г.р. Квалификационные категории: III, II, I юношеские, КМС, МС.</p>
-                        <div class="event-tags">
-                            <span class="tag age">6-18 лет</span>
-                            <span class="tag level">Любой уровень</span>
-                            <span class="tag">Художественная гимнастика</span>
+                        <h3>Автоматизация бумажных заявок</h3>
+                        <p>Автоматические уведомления привлекают целевую аудиторию без вашего участия.</p>
+                    </article>
+                    <article class="benefit-card-simple">
+                        <div class="benefit-icon-wrapper">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#6B4EFF" stroke-width="2">
+                                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                                <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+                            </svg>
                         </div>
-                    </div>
-                    <div class="event-actions">
-                        <button class="btn btn-primary">Подробнее</button>
-                        <button class="btn btn-outline">Зарегистрироваться</button>
-                    </div>
-                </div>
-                <div class="event-row">
-                    <div class="event-image">
-                        <img src="https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?w=200&h=150&fit=crop" alt="Соревнование">
-                    </div>
-                    <div class="event-info">
-                        <div class="event-meta">
-                            <span class="event-date">22-23 марта 2026</span>
-                            <span class="event-location">📍 Санкт-Петербург, ДС «Юбилейный»</span>
+                        <h3>Мгновенное оповещение участников</h3>
+                        <p>Автоматические уведомления привлекают целевую аудиторию без вашего участия.</p>
+                    </article>
+                    <article class="benefit-card-simple">
+                        <div class="benefit-icon-wrapper">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#6B4EFF" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="3" y1="9" x2="21" y2="9"/>
+                                <line x1="9" y1="21" x2="9" y2="9"/>
+                            </svg>
                         </div>
-                        <h3>Открытый турнир «Гимнастка»</h3>
-                        <p>Всероссийские соревнования с присвоением разрядов. Призовой фонд 500 000 ₽.</p>
-                        <div class="event-tags">
-                            <span class="tag age">8-16 лет</span>
-                            <span class="tag level">КМС и выше</span>
-                            <span class="tag">Художественная гимнастика</span>
+                        <h3>Сбор данных в нужном вам формате</h3>
+                        <p>Автоматические уведомления привлекают целевую аудиторию без вашего участия.</p>
+                    </article>
+                    <article class="benefit-card-simple">
+                        <div class="benefit-icon-wrapper">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#6B4EFF" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14,2 14,8 20,8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                                <polyline points="10,9 9,9 8,9"/>
+                            </svg>
                         </div>
-                    </div>
-                    <div class="event-actions">
-                        <button class="btn btn-primary">Подробнее</button>
-                        <button class="btn btn-outline">Зарегистрироваться</button>
-                    </div>
-                </div>
-                <div class="event-row">
-                    <div class="event-image">
-                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=200&h=150&fit=crop" alt="Сборы">
-                    </div>
-                    <div class="event-info">
-                        <div class="event-meta">
-                            <span class="event-date">1-7 апреля 2026</span>
-                            <span class="event-location">📍 Сочи, ЦС «Юность»</span>
-                        </div>
-                        <h3>Учебно-тренировочные сборы в Сочи</h3>
-                        <p>Межрегиональные сборы с участием сборных команд. Проживание, питание, тренировки.</p>
-                        <div class="event-tags">
-                            <span class="tag age">10-18 лет</span>
-                            <span class="tag">УТС</span>
-                            <span class="tag">Все виды спорта</span>
-                        </div>
-                    </div>
-                    <div class="event-actions">
-                        <button class="btn btn-primary">Подробнее</button>
-                        <button class="btn btn-outline">Зарегистрироваться</button>
-                    </div>
+                        <h3>Автоматизация бумажных заявок</h3>
+                        <p>Автоматические уведомления привлекают целевую аудиторию без вашего участия.</p>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Partners Section -->
-    <section class="section section-light">
-        <div class="container">
-            <h2 class="section-title-center">Наши партнёры</h2>
-            <div class="partners-grid">
-                <div class="partner-logo">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/ROC_logo.svg/200px-ROC_logo.svg.png" alt="ROC">
-                    <span>ROC</span>
+        <!-- Events Section -->
+        <section class="section" aria-labelledby="events-heading">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="events-heading">Ближайшие соревнования</h2>
+                    <a href="/sorevnovaniya/dobavit/" class="btn btn-add">+ Добавить соревнование</a>
                 </div>
-                <div class="partner-logo">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/ROC_logo.svg/200px-ROC_logo.svg.png" alt="ROC">
-                    <span>ROC</span>
-                </div>
-                <div class="partner-logo">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/ROC_logo.svg/200px-ROC_logo.svg.png" alt="ROC">
-                    <span>ROC</span>
-                </div>
-                <div class="partner-logo">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/ROC_logo.svg/200px-ROC_logo.svg.png" alt="ROC">
-                    <span>ROC</span>
-                </div>
-            </div>
-        </div>
-    </section>
+                <div class="events-detailed-list" itemscope itemtype="https://schema.org/EventSeries">
+                    <article class="event-detailed" itemscope itemtype="https://schema.org/SportsEvent">
+                        <div class="event-detailed-header">
+                            <div class="event-meta-line">
+                                <span class="event-date-range" itemprop="startDate" content="2025-12-07">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                    7 - 12 декабря 2025 г.
+                                </span>
+                                <span class="event-city" itemprop="location" itemscope itemtype="https://schema.org/Place">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    <span itemprop="name">Санкт-Петербург</span>
+                                </span>
+                                <span class="event-type-badge">Классификационное</span>
+                            </div>
+                            <div class="event-razryads">
+                                <span class="razryad">ИП</span>
+                                <span class="razryad">ГУ</span>
+                                <span class="razryad active">1Ю</span>
+                                <span class="razryad active">3С</span>
+                                <span class="razryad active">2С</span>
+                                <span class="razryad">1С</span>
+                                <span class="razryad">КМС</span>
+                            </div>
+                        </div>
+                        <div class="event-detailed-body">
+                            <div class="event-photo">
+                                <img src="https://images.unsplash.com/photo-1562771242-a02d9090c90c?w=200&h=150&fit=crop" 
+                                     alt="Открытый турнир по художественной гимнастике"
+                                     itemprop="image"
+                                     loading="lazy">
+                            </div>
+                            <div class="event-info-detailed">
+                                <h3 itemprop="name">Открытый турнир по художественной гимнастике олимпийской чемпионки Анастасии Назаренко "NAZARÉ CUP"</h3>
+                                <div class="event-stats">
+                                    <span>331 заявка</span>
+                                    <span>44 школы</span>
+                                    <span>1029 спортсменов</span>
+                                </div>
+                            </div>
+                            <div class="event-actions-detailed">
+                                <button class="btn btn-copy" aria-label="Скопировать ссылку">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                                    </svg>
+                                </button>
+                                <a href="#" class="btn btn-submit" itemprop="url">
+                                    Подать заявку
+                                    <span class="timer">остался 1 день 2 ч 33 мин</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="event-detailed" itemscope itemtype="https://schema.org/SportsEvent">
+                        <div class="event-detailed-header">
+                            <div class="event-meta-line">
+                                <span class="event-date-range">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                    7 - 12 декабря 2025 г.
+                                </span>
+                                <span class="event-city">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    Санкт-Петербург
+                                </span>
+                                <span class="event-type-badge">Классификационное</span>
+                            </div>
+                            <div class="event-razryads">
+                                <span class="razryad">1Ю</span>
+                                <span class="razryad">3С</span>
+                                <span class="razryad">2С</span>
+                                <span class="razryad">1С</span>
+                                <span class="razryad">КМС</span>
+                            </div>
+                        </div>
+                        <div class="event-detailed-body">
+                            <div class="event-photo">
+                                <img src="https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?w=200&h=150&fit=crop" 
+                                     alt="Чемпионат Санкт-Петербурга"
+                                     loading="lazy">
+                            </div>
+                            <div class="event-info-detailed">
+                                <h3>Чемпионат Санкт-Петербурга</h3>
+                                <div class="event-stats">
+                                    <span>331 заявка</span>
+                                    <span>44 школы</span>
+                                    <span>1029 спортсменов</span>
+                                </div>
+                            </div>
+                            <div class="event-actions-detailed">
+                                <button class="btn btn-copy" aria-label="Скопировать ссылку">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                                    </svg>
+                                </button>
+                                <a href="#" class="btn btn-submit">
+                                    Подать заявку
+                                    <span class="timer">остался 1 день 2 ч 33 мин</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
 
-    <!-- News Section -->
-    <section id="news" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Новости</h2>
-                <button class="btn btn-outline">Все новости</button>
+                    <article class="event-detailed event-cancelled">
+                        <div class="event-detailed-header">
+                            <div class="event-meta-line">
+                                <span class="event-date-range">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                    7 - 12 декабря 2025 г.
+                                </span>
+                                <span class="event-city">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    Санкт-Петербург
+                                </span>
+                                <span class="event-type-badge">Классификационное</span>
+                            </div>
+                            <div class="event-razryads">
+                                <span class="razryad">ИП</span>
+                                <span class="razryad">ГУ</span>
+                                <span class="razryad">1Ю</span>
+                                <span class="razryad">3С</span>
+                                <span class="razryad">2С</span>
+                                <span class="razryad">1С</span>
+                                <span class="razryad">КМС</span>
+                            </div>
+                        </div>
+                        <div class="event-detailed-body">
+                            <div class="event-photo">
+                                <img src="https://images.unsplash.com/photo-1547347298-4074fc3086f0?w=200&h=150&fit=crop" 
+                                     alt="Открытый турнир"
+                                     loading="lazy">
+                            </div>
+                            <div class="event-info-detailed">
+                                <h3>Открытый турнир по художественной гимнастике "КУБОК ЧКАЛОВ АРЕНА"</h3>
+                            </div>
+                            <div class="event-actions-detailed">
+                                <button class="btn btn-copy" aria-label="Скопировать ссылку">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                                    </svg>
+                                </button>
+                                <span class="status-cancelled">Отменено</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <div class="show-more">
+                        <a href="/sorevnovaniya/" class="btn-show-more">Открыть список соревнований</a>
+                    </div>
+                </div>
             </div>
-            <div class="news-grid">
-                <div class="news-card">
-                    <div class="news-image">
-                        <img src="https://images.unsplash.com/photo-1562771242-a02d9090c90c?w=400&h=250&fit=crop" alt="Новость">
+        </section>
+
+        <!-- Partners Section -->
+        <section class="section section-light partners-section" aria-labelledby="partners-heading">
+            <div class="container">
+                <h2 id="partners-heading">Наши партнёры</h2>
+                <div class="partners-slider">
+                    <div class="partner-card">
+                        <div class="partner-dot"></div>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/ROC_logo.svg/200px-ROC_logo.svg.png" alt="ROC Innovation Center">
+                        <p class="partner-name">ROC INNOVATION CENTER</p>
+                        <p class="partner-desc">Инновационный центр олимпийского комитета России</p>
                     </div>
-                    <div class="news-content">
-                        <span class="news-date">15 марта 2026</span>
-                        <h3>Итоги Кубка России по художественной гимнастике</h3>
-                        <p>Московские гимнастки завоевали 8 золотых медалей на прошедших соревнованиях...</p>
+                    <div class="partner-card">
+                        <div class="partner-dot"></div>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/ROC_logo.svg/200px-ROC_logo.svg.png" alt="ROC Innovation Center">
+                        <p class="partner-name">ROC INNOVATION CENTER</p>
+                        <p class="partner-desc">Инновационный центр олимпийского комитета России</p>
                     </div>
-                </div>
-                <div class="news-card">
-                    <div class="news-image">
-                        <img src="https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?w=400&h=250&fit=crop" alt="Новость">
+                    <div class="partner-card">
+                        <div class="partner-dot"></div>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/ROC_logo.svg/200px-ROC_logo.svg.png" alt="ROC Innovation Center">
+                        <p class="partner-name">ROC INNOVATION CENTER</p>
+                        <p class="partner-desc">Инновационный центр олимпийского комитета России</p>
                     </div>
-                    <div class="news-content">
-                        <span class="news-date">12 марта 2026</span>
-                        <h3>Новые правила судейства с 2026 года</h3>
-                        <p>Международная федерация гимнастики утвердила изменения в правилах оценки...</p>
+                    <div class="partner-card">
+                        <div class="partner-dot"></div>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/ROC_logo.svg/200px-ROC_logo.svg.png" alt="ROC Innovation Center">
+                        <p class="partner-name">ROC INNOVATION CENTER</p>
+                        <p class="partner-desc">Инновационный центр олимпийского комитета России</p>
                     </div>
-                </div>
-                <div class="news-card">
-                    <div class="news-image">
-                        <img src="https://images.unsplash.com/photo-1547347298-4074fc3086f0?w=400&h=250&fit=crop" alt="Новость">
-                    </div>
-                    <div class="news-content">
-                        <span class="news-date">10 марта 2026</span>
-                        <h3>Сборная России выиграла командный турнир</h3>
-                        <p>На этапе Кубка мира в Баку российские гимнастки показали лучший результат...</p>
-                    </div>
-                </div>
-                <div class="news-card">
-                    <div class="news-image">
-                        <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=400&h=250&fit=crop" alt="Новость">
-                    </div>
-                    <div class="news-content">
-                        <span class="news-date">8 марта 2026</span>
-                        <h3>Мастер-класс от Олимпийской чемпионки</h3>
-                        <p>Алина Кабаева провела открытую тренировку для юных гимнасток...</p>
-                    </div>
+                    <button class="slider-arrow" aria-label="Следующий">→</button>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- News Section -->
+        <section class="section" aria-labelledby="news-section-heading">
+            <div class="container">
+                <h2 id="news-section-heading">Новости</h2>
+                <div class="news-filters">
+                    <button class="filter-btn">Разряды и нормативы</button>
+                    <button class="filter-btn active">Художественная гимнастика</button>
+                    <button class="filter-btn">Разряды и нормативы</button>
+                    <button class="filter-btn">Соревнования</button>
+                    <a href="/novosti/" class="btn btn-primary btn-view-all">Смотреть все</a>
+                </div>
+                <div class="news-grid-4" itemscope itemtype="https://schema.org/ItemList">
+                    <article class="news-card-detailed" itemscope itemtype="https://schema.org/NewsArticle" itemprop="itemListElement">
+                        <meta itemprop="position" content="1">
+                        <div class="news-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1562771242-a02d9090c90c?w=400&h=250&fit=crop" 
+                                 alt="Зрительский этикет на турнире"
+                                 itemprop="image"
+                                 loading="lazy">
+                        </div>
+                        <div class="news-meta">
+                            <time itemprop="datePublished" datetime="2026-01-22">22.01.2026</time>
+                            <span class="views">👁 226</span>
+                        </div>
+                        <h3 itemprop="headline">Зрительский этикет: как правильно поддерживать свою дочь на турнире</h3>
+                        <p itemprop="description">Технический комитет FIG опубликовал актуальные поправки на новый олимпийский цикл. Главные нововведения для тренеров и гимнаст...</p>
+                        <a href="#" class="read-more">Подробнее →</a>
+                    </article>
+                    <article class="news-card-detailed" itemscope itemtype="https://schema.org/NewsArticle" itemprop="itemListElement">
+                        <meta itemprop="position" content="2">
+                        <div class="news-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?w=400&h=250&fit=crop" 
+                                 alt="Растяжка для начинающих"
+                                 itemprop="image"
+                                 loading="lazy">
+                        </div>
+                        <div class="news-meta">
+                            <time itemprop="datePublished" datetime="2026-01-22">22.01.2026</time>
+                            <span class="views">👁 226</span>
+                        </div>
+                        <h3 itemprop="headline">Растяжка для начинающих: безопасные упражнения дома</h3>
+                        <p itemprop="description">Технический комитет FIG опубликовал актуальные поправки на новый олимпийский цикл. Главные нововведения для тренеров и гимнаст...</p>
+                        <a href="#" class="read-more">Подробнее →</a>
+                    </article>
+                    <article class="news-card-detailed" itemscope itemtype="https://schema.org/NewsArticle" itemprop="itemListElement">
+                        <meta itemprop="position" content="3">
+                        <div class="news-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=250&fit=crop" 
+                                 alt="Отдых и восстановление"
+                                 itemprop="image"
+                                 loading="lazy">
+                        </div>
+                        <div class="news-meta">
+                            <time itemprop="datePublished" datetime="2026-01-22">22.01.2026</time>
+                            <span class="views">👁 226</span>
+                        </div>
+                        <h3 itemprop="headline">Отдых и восстановление: почему сон важен не меньше тренировок?</h3>
+                        <p itemprop="description">Технический комитет FIG опубликовал актуальные поправки на новый олимпийский цикл. Главные нововведения для тренеров и гимнаст...</p>
+                        <a href="#" class="read-more">Подробнее →</a>
+                    </article>
+                    <article class="news-card-detailed" itemscope itemtype="https://schema.org/NewsArticle" itemprop="itemListElement">
+                        <meta itemprop="position" content="4">
+                        <div class="news-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1547347298-4074fc3086f0?w=400&h=250&fit=crop" 
+                                 alt="Укрепляем стопу и голеностоп"
+                                 itemprop="image"
+                                 loading="lazy">
+                        </div>
+                        <div class="news-meta">
+                            <time itemprop="datePublished" datetime="2026-01-22">22.01.2026</time>
+                            <span class="views">👁 226</span>
+                        </div>
+                        <h3 itemprop="headline">Укрепляем стопу и голеностоп: упражнения для красивого прыжка и профилактики травм</h3>
+                        <p itemprop="description">Технический комитет FIG опубликовал актуальные поправки на новый олимпийский цикл. Главные нововведения для тренеров и гимнаст...</p>
+                        <a href="#" class="read-more">Подробнее →</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-bg">
-            <div class="circle circle-1"></div>
-            <div class="circle circle-2"></div>
-            <div class="circle circle-3"></div>
-        </div>
+    <footer class="footer" itemscope itemtype="https://schema.org/WPFooter">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-main">
-                    <div class="footer-brand">
-                        <h3>sportida</h3>
-                        <p>Платформа для спортивных событий нового поколения</p>
-                    </div>
-                    <div class="footer-subscribe">
-                        <h4>Подписка на новости</h4>
-                        <div class="subscribe-form">
-                            <input type="email" placeholder="Ваш email">
-                            <button class="btn btn-white">Подписаться</button>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2 itemprop="name">sportida</h2>
+                    <p>Сервис предоставляет информацию в области спортивной деятельности, соблюдая применимые нормативные требования. Использование ресурса предполагает согласие с его условиями и соответствие действующему законодательству. При использовании материалов гиперссылка на sportida.ru обязательна.</p>
+                    <div class="cookie-notice">
+                        <span class="cookie-icon">🍪</span>
+                        <div>
+                            <strong>Мы используем файлы cookie</strong>
+                            <span>чтобы предоставить пользователям больше возможностей при посещении сайта sportida.ru</span>
                         </div>
                     </div>
                 </div>
                 <div class="footer-contacts">
                     <div class="contact-item">
-                        <span>📞</span>
-                        <a href="tel:+78001234567">8 (800) 123-45-67</a>
+                        <span class="contact-label">Телефон</span>
+                        <a href="tel:+79625568709" itemprop="telephone">+7 (962) 556-87-09</a>
                     </div>
                     <div class="contact-item">
-                        <span>✉️</span>
-                        <a href="mailto:info@sportida.ru">info@sportida.ru</a>
+                        <span class="contact-label">Email</span>
+                        <a href="mailto:sportida@gmail.com" itemprop="email">sportida@gmail.com</a>
                     </div>
                     <div class="social-links">
-                        <a href="#" class="social-btn">VK</a>
-                        <a href="#" class="social-btn">TG</a>
-                        <a href="#" class="social-btn">YT</a>
+                        <a href="https://t.me/sportida" class="social-btn" aria-label="Telegram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                            </svg>
+                        </a>
+                        <a href="https://vk.com/sportida" class="social-btn" aria-label="VKontakte">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M15.684 0H8.316C1.592 0 0 1.592 0 8.316v7.368C0 22.408 1.592 24 8.316 24h7.368C22.408 24 24 22.408 24 15.684V8.316C24 1.592 22.408 0 15.684 0zm3.692 17.123h-1.744c-.66 0-.864-.525-2.05-1.727-1.033-1-1.49-1.135-1.744-1.135-.356 0-.458.102-.458.593v1.575c0 .424-.135.678-1.253.678-1.846 0-3.896-1.12-5.339-3.202C4.624 10.857 4 8.673 4 8.233c0-.254.102-.491.593-.491h1.744c.44 0 .61.203.78.678.863 2.49 2.303 4.675 2.896 4.675.22 0 .322-.102.322-.66V9.721c-.068-1.186-.695-1.287-.695-1.71 0-.203.17-.407.44-.407h2.744c.373 0 .508.203.508.643v3.473c0 .372.17.508.271.508.22 0 .407-.136.814-.542 1.27-1.422 2.176-3.61 2.176-3.61.119-.254.322-.491.763-.491h1.744c.525 0 .644.27.525.643-.22 1.017-2.354 4.031-2.354 4.031-.186.305-.254.44 0 .78.186.254.796.779 1.203 1.253.745.847 1.32 1.558 1.473 2.049.17.49-.085.744-.576.744z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-btn" aria-label="Сообщить об ошибке">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2026 SPORTIDA. Все права защищены.</p>
+                <p>© 2026, ООО «Спортида» ИНН: 1234567890, ОГРН: 1234567890123, Адрес: 123456, г. Москва, ул Лесная, д.1</p>
+                <div class="footer-links">
+                    <a href="/privacy/">Политика конфиденциальности</a>
+                    <a href="/terms/">Пользовательское соглашение</a>
+                </div>
             </div>
         </div>
     </footer>
