@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPORTIDA — Всё о детском спорте</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="/" class="logo">SPORTIDA</a>
+                <ul class="nav-menu">
+                    <li><a href="#calendar">Календарь</a></li>
+                    <li><a href="#sections">Секции</a></li>
+                    <li><a href="#news">Новости</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+                <button class="btn btn-outline">Войти</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Всё о детском спорте в одном месте</h1>
+                <p class="hero-subtitle">Найдите секцию, запишитесь на соревнование или организуйте мероприятие</p>
+                <div class="hero-buttons">
+                    <a href="#calendar" class="btn btn-primary">Найти соревнование</a>
+                    <a href="#sections" class="btn btn-secondary">Найти секцию</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calendar Section -->
+    <section id="calendar" class="section">
+        <div class="container">
+            <h2 class="section-title">Ближайшие соревнования</h2>
+            <div class="filters">
+                <select class="filter-select">
+                    <option>Все города</option>
+                    <option>Москва</option>
+                    <option>Санкт-Петербург</option>
+                    <option>Казань</option>
+                </select>
+                <select class="filter-select">
+                    <option>Все виды спорта</option>
+                    <option>Художественная гимнастика</option>
+                </select>
+                <input type="date" class="filter-date" placeholder="Дата">
+            </div>
+            <div class="events-grid" id="events-grid">
+                <!-- Events will be loaded here -->
+            </div>
+            <div class="text-center">
+                <button class="btn btn-outline">Показать все</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- For Organizers -->
+    <section class="section section-purple">
+        <div class="container">
+            <div class="organizers-content">
+                <h2>Для организаторов</h2>
+                <p>Организуйте соревнование, собирайте заявки и принимайте оплату онлайн</p>
+                <button class="btn btn-white">Добавить мероприятие</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="section">
+        <div class="container">
+            <h2 class="section-title">Новости и статьи</h2>
+            <div class="news-grid">
+                <article class="news-card">
+                    <div class="news-image"></div>
+                    <div class="news-content">
+                        <span class="news-date">15 марта 2026</span>
+                        <h3>Как выбрать секцию художественной гимнастики</h3>
+                        <p>Советы родителям по выбору тренера и клуба...</p>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="news-image"></div>
+                    <div class="news-content">
+                        <span class="news-date">12 марта 2026</span>
+                        <h3>Что взять на первую тренировку</h3>
+                        <p>Полный список необходимых вещей...</p>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="news-image"></div>
+                    <div class="news-content">
+                        <span class="news-date">10 марта 2026</span>
+                        <h3>Разряды в художественной гимнастике</h3>
+                        <p>Как проходит присвоение разрядов...</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section section-light">
+        <div class="container">
+            <h2 class="section-title">Часто задаваемые вопросы</h2>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>Как записаться на соревнование?</summary>
+                    <p>Выберите мероприятие в календаре, нажмите "Подробнее" и заполните форму заявки.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Сколько стоит участие?</summary>
+                    <p>Стоимость указывается в карточке каждого мероприятия. Оплата происходит онлайн.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Как добавить свое мероприятие?</summary>
+                    <p>Нажмите кнопку "Добавить мероприятие", заполните форму и дождитесь модерации.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">SPORTIDA</div>
+                <p>Платформа для детско-юношеского спорта</p>
+                <div class="footer-links">
+                    <a href="#">О проекте</a>
+                    <a href="#">Контакты</a>
+                    <a href="#">Политика конфиденциальности</a>
+                </div>
+                <p class="footer-copy">© 2026 SPORTIDA</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="static/js/app.js"></script>
+</body>
+</html>
