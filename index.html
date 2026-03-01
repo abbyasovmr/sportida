@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SPORTIDA — Всё о детском спорте</title>
+    <title>SPORTIDA — Платформа для спортивных событий нового поколения</title>
     <link rel="stylesheet" href="static/css/style.css">
 </head>
 <body>
@@ -13,12 +13,12 @@
             <nav class="nav">
                 <a href="/" class="logo">SPORTIDA</a>
                 <ul class="nav-menu">
-                    <li><a href="#calendar">Календарь</a></li>
-                    <li><a href="#sections">Секции</a></li>
+                    <li><a href="#about">О платформе</a></li>
+                    <li><a href="#events">События</a></li>
+                    <li><a href="#organizers">Организаторам</a></li>
                     <li><a href="#news">Новости</a></li>
-                    <li><a href="#faq">FAQ</a></li>
                 </ul>
-                <button class="btn btn-outline">Войти</button>
+                <button class="btn btn-primary">Стать партнёром</button>
             </nav>
         </div>
     </header>
@@ -27,49 +27,231 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Всё о детском спорте в одном месте</h1>
-                <p class="hero-subtitle">Найдите секцию, запишитесь на соревнование или организуйте мероприятие</p>
-                <div class="hero-buttons">
-                    <a href="#calendar" class="btn btn-primary">Найти соревнование</a>
-                    <a href="#sections" class="btn btn-secondary">Найти секцию</a>
+                <div class="hero-text">
+                    <h1>Платформа для спортивных событий нового поколения</h1>
+                    <p class="hero-subtitle">Единое цифровое пространство для юных спортсменов, тренеров и организаторов соревнований</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary btn-large">Я спортсмен</button>
+                        <button class="btn btn-primary btn-large">Я организатор</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-placeholder">
+                        <span>🤸‍♀️</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Calendar Section -->
-    <section id="calendar" class="section">
+    <!-- Sports Categories -->
+    <section class="section">
         <div class="container">
-            <h2 class="section-title">Ближайшие соревнования</h2>
-            <div class="filters">
-                <select class="filter-select">
-                    <option>Все города</option>
-                    <option>Москва</option>
-                    <option>Санкт-Петербург</option>
-                    <option>Казань</option>
-                </select>
-                <select class="filter-select">
-                    <option>Все виды спорта</option>
-                    <option>Художественная гимнастика</option>
-                </select>
-                <input type="date" class="filter-date" placeholder="Дата">
-            </div>
-            <div class="events-grid" id="events-grid">
-                <!-- Events will be loaded here -->
-            </div>
-            <div class="text-center">
-                <button class="btn btn-outline">Показать все</button>
+            <div class="sports-grid">
+                <div class="sport-card">
+                    <div class="sport-image" style="background: linear-gradient(135deg, #FF6B9D 0%, #C44569 100%);">
+                        <span>🎀</span>
+                    </div>
+                    <h3>Художественная гимнастика</h3>
+                </div>
+                <div class="sport-card">
+                    <div class="sport-image" style="background: linear-gradient(135deg, #4FACFE 0%, #00F2FE 100%);">
+                        <span>🏃‍♀️</span>
+                    </div>
+                    <h3>Спортивная гимнастика</h3>
+                </div>
+                <div class="sport-card">
+                    <div class="sport-image" style="background: linear-gradient(135deg, #43E97B 0%, #38F9D7 100%);">
+                        <span>🤸</span>
+                    </div>
+                    <h3>Акробатика</h3>
+                </div>
+                <div class="sport-card">
+                    <div class="sport-image" style="background: linear-gradient(135deg, #FA709A 0%, #FEE140 100%);">
+                        <span>💃</span>
+                    </div>
+                    <h3>Танцевальный спорт</h3>
+                </div>
+                <div class="sport-card">
+                    <div class="sport-image" style="background: linear-gradient(135deg, #30CFD0 0%, #330867 100%);">
+                        <span>🦘</span>
+                    </div>
+                    <h3>Прыжки на батуте</h3>
+                </div>
+                <div class="sport-card">
+                    <div class="sport-image" style="background: linear-gradient(135deg, #A8EDEA 0%, #FED6E3 100%);">
+                        <span>⛸️</span>
+                    </div>
+                    <h3>Фигурное катание</h3>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- For Organizers -->
-    <section class="section section-purple">
+    <!-- Stats Section -->
+    <section class="section section-light">
         <div class="container">
-            <div class="organizers-content">
-                <h2>Для организаторов</h2>
-                <p>Организуйте соревнование, собирайте заявки и принимайте оплату онлайн</p>
-                <button class="btn btn-white">Добавить мероприятие</button>
+            <div class="stats-header">
+                <h2>Мы строим мост между организаторами турниров и будущими чемпионами</h2>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">100+</span>
+                    <span class="stat-label">спортсменов</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">организаторов</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">80%</span>
+                    <span class="stat-label">регионов РФ</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">видов спорта</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ecosystem Section -->
+    <section class="section">
+        <div class="container">
+            <div class="ecosystem-content">
+                <div class="ecosystem-text">
+                    <h2>Профессиональная экосистема юниорского спорта</h2>
+                    <p>Всё необходимое для организации, участия и продвижения спортивных мероприятий в одном месте</p>
+                </div>
+                <div class="ecosystem-features">
+                    <div class="feature-item">
+                        <span class="feature-icon">✓</span>
+                        <span>Регистрация и учёт участников</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">✓</span>
+                        <span>Онлайн-оплата стартовых взносов</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">✓</span>
+                        <span>Формирование сеток и расписания</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">✓</span>
+                        <span>Живые трансляции и трансляции</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">✓</span>
+                        <span>Электронные протоколы и дипломы</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- For Whom Section -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="tabs">
+                <button class="tab-btn active">Организаторам</button>
+                <button class="tab-btn">Спортсменам</button>
+            </div>
+            <div class="tab-content">
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">🎯</div>
+                        <h3>Увеличение охвата</h3>
+                        <p>Привлекайте участников со всей России</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">💳</div>
+                        <h3>Автоматизация платежей</h3>
+                        <p>Принимайте оплату онлайн без комиссии</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">📊</div>
+                        <h3>Аналитика</h3>
+                        <p>Отслеживайте статистику мероприятий</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">🏆</div>
+                        <h3>Продвижение</h3>
+                        <p>Повышайте узнаваемость ваших турниров</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Ближайшие соревнования</h2>
+                <button class="btn btn-outline">Все события</button>
+            </div>
+            <div class="events-list">
+                <div class="event-row">
+                    <div class="event-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                    <div class="event-info">
+                        <span class="event-date">15-16 марта 2026</span>
+                        <h3>Кубок «Весенняя капель» по художественной гимнастике</h3>
+                        <p>Открытые соревнования для гимнасток 2008-2016 г.р. Квалификационные категории.</p>
+                        <div class="event-tags">
+                            <span class="tag">Москва</span>
+                            <span class="tag">Художественная гимнастика</span>
+                        </div>
+                    </div>
+                    <div class="event-actions">
+                        <button class="btn btn-primary">Подробнее</button>
+                        <button class="btn btn-outline">Зарегистрироваться</button>
+                    </div>
+                </div>
+                <div class="event-row">
+                    <div class="event-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+                    <div class="event-info">
+                        <span class="event-date">22-23 марта 2026</span>
+                        <h3>Открытый турнир «Гимнастка»</h3>
+                        <p>Всероссийские соревнования с присвоением разрядов. Призовой фонд 500 000 ₽.</p>
+                        <div class="event-tags">
+                            <span class="tag">Санкт-Петербург</span>
+                            <span class="tag">Художественная гимнастика</span>
+                        </div>
+                    </div>
+                    <div class="event-actions">
+                        <button class="btn btn-primary">Подробнее</button>
+                        <button class="btn btn-outline">Зарегистрироваться</button>
+                    </div>
+                </div>
+                <div class="event-row">
+                    <div class="event-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+                    <div class="event-info">
+                        <span class="event-date">1-7 апреля 2026</span>
+                        <h3>Учебно-тренировочные сборы в Сочи</h3>
+                        <p>Межрегиональные сборы с участием сборных команд. Проживание, питание, тренировки.</p>
+                        <div class="event-tags">
+                            <span class="tag">Сочи</span>
+                            <span class="tag">УТС</span>
+                        </div>
+                    </div>
+                    <div class="event-actions">
+                        <button class="btn btn-primary">Подробнее</button>
+                        <button class="btn btn-outline">Зарегистрироваться</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="section section-light">
+        <div class="container">
+            <h2 class="section-title-center">Наши партнёры</h2>
+            <div class="partners-grid">
+                <div class="partner-logo">ROC</div>
+                <div class="partner-logo">ROC</div>
+                <div class="partner-logo">ROC</div>
+                <div class="partner-logo">ROC</div>
             </div>
         </div>
     </section>
@@ -77,53 +259,43 @@
     <!-- News Section -->
     <section id="news" class="section">
         <div class="container">
-            <h2 class="section-title">Новости и статьи</h2>
+            <div class="section-header">
+                <h2>Новости</h2>
+                <button class="btn btn-outline">Все новости</button>
+            </div>
             <div class="news-grid">
-                <article class="news-card">
-                    <div class="news-image"></div>
+                <div class="news-card">
+                    <div class="news-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
                     <div class="news-content">
                         <span class="news-date">15 марта 2026</span>
-                        <h3>Как выбрать секцию художественной гимнастики</h3>
-                        <p>Советы родителям по выбору тренера и клуба...</p>
+                        <h3>Итоги Кубка России по художественной гимнастике</h3>
+                        <p>Московские гимнастки завоевали 8 золотых медалей...</p>
                     </div>
-                </article>
-                <article class="news-card">
-                    <div class="news-image"></div>
+                </div>
+                <div class="news-card">
+                    <div class="news-image" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);"></div>
                     <div class="news-content">
                         <span class="news-date">12 марта 2026</span>
-                        <h3>Что взять на первую тренировку</h3>
-                        <p>Полный список необходимых вещей...</p>
+                        <h3>Новые правила судейства с 2026 года</h3>
+                        <p>Международная федерация гимнастики утвердила изменения...</p>
                     </div>
-                </article>
-                <article class="news-card">
-                    <div class="news-image"></div>
+                </div>
+                <div class="news-card">
+                    <div class="news-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);"></div>
                     <div class="news-content">
                         <span class="news-date">10 марта 2026</span>
-                        <h3>Разряды в художественной гимнастике</h3>
-                        <p>Как проходит присвоение разрядов...</p>
+                        <h3>Сборная России выиграла командный турнир</h3>
+                        <p>На этапе Кубка мира в Баку российские гимнастки...</p>
                     </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section id="faq" class="section section-light">
-        <div class="container">
-            <h2 class="section-title">Часто задаваемые вопросы</h2>
-            <div class="faq-list">
-                <details class="faq-item">
-                    <summary>Как записаться на соревнование?</summary>
-                    <p>Выберите мероприятие в календаре, нажмите "Подробнее" и заполните форму заявки.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Сколько стоит участие?</summary>
-                    <p>Стоимость указывается в карточке каждого мероприятия. Оплата происходит онлайн.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Как добавить свое мероприятие?</summary>
-                    <p>Нажмите кнопку "Добавить мероприятие", заполните форму и дождитесь модерации.</p>
-                </details>
+                </div>
+                <div class="news-card">
+                    <div class="news-image" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);"></div>
+                    <div class="news-content">
+                        <span class="news-date">8 марта 2026</span>
+                        <h3>Мастер-класс от Олимпийской чемпионки</h3>
+                        <p>Алина Кабаева провела открытую тренировку...</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -132,14 +304,37 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">SPORTIDA</div>
-                <p>Платформа для детско-юношеского спорта</p>
-                <div class="footer-links">
-                    <a href="#">О проекте</a>
-                    <a href="#">Контакты</a>
-                    <a href="#">Политика конфиденциальности</a>
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <h3>sportida</h3>
+                        <p>Платформа для спортивных событий нового поколения</p>
+                    </div>
+                    <div class="footer-subscribe">
+                        <h4>Подписка на новости</h4>
+                        <div class="subscribe-form">
+                            <input type="email" placeholder="Ваш email">
+                            <button class="btn btn-white">Подписаться</button>
+                        </div>
+                    </div>
                 </div>
-                <p class="footer-copy">© 2026 SPORTIDA</p>
+                <div class="footer-contacts">
+                    <div class="contact-item">
+                        <span>📞</span>
+                        <a href="tel:+78001234567">8 (800) 123-45-67</a>
+                    </div>
+                    <div class="contact-item">
+                        <span>✉️</span>
+                        <a href="mailto:info@sportida.ru">info@sportida.ru</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="#">VK</a>
+                        <a href="#">TG</a>
+                        <a href="#">YT</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 SPORTIDA. Все права защищены.</p>
             </div>
         </div>
     </footer>
