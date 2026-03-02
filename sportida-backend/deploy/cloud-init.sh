@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Cloud-init скрипт для развёртывания Sportida на Timeweb Cloud
 
 set -e
@@ -94,7 +94,7 @@ server {
 NGINX
 
 ln -sf /etc/nginx/sites-available/sportida /etc/nginx/sites-enabled/
-pm -f /etc/nginx/sites-enabled/default
+rm -f /etc/nginx/sites-enabled/default
 nginx -t && systemctl restart nginx
 
 # Права
