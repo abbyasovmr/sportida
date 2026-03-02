@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # Cloud-init скрипт для развёртывания Sportida на Timeweb Cloud
 
 set -e
